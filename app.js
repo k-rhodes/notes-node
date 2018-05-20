@@ -6,7 +6,7 @@ const notes = require('./notes.js');
 
 var res = notes.addNote();
 
-console.log(res);
+console.log('Results: ', notes.addNum(2,4));
 
 // var user = os.userInfo();
 
