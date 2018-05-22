@@ -12,7 +12,12 @@ console.log('Command: ', command);
 console.log('Yargs.argv:', argv);
 
 if(command === 'add') {
-  notes.addNote(argv.title, argv.body);
+  note = notes.addNote(argv.title, argv.body);
+  if (note){
+    console.log('note created: ', note.title, note.body);
+  } else {
+    console.log('The title of that note is a duplicate.');
+  }
 } else if (command === 'list') {
   notes.getAll();
 } else if (command === 'read') {
